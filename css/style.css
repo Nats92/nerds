@@ -1,0 +1,190 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+img {
+    max-width: 100%;
+}
+button {
+    border: none;
+    background-color: transparent;
+}
+.main-header {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #000;
+
+    background-color: #eeeeee;
+}
+    .center-wrap {
+        max-width: 1200px;
+        padding: 0 20px;
+        margin: 0 auto;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+        .nav-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 50px;
+            margin-bottom: 15px;
+
+            text-transform: uppercase;
+        }
+            .logo-wrap {
+                display: inline-block;
+                width: 160px;
+                height: 65px;
+
+                flex-shrink: 0;
+            }
+                .logo-wrap img {
+                    width: 100%;
+                    height: auto;
+                }
+                .logo-wrap:hover,
+                .logo-wrap:focus {
+                    opacity: 0.8;
+                }
+                .logo-wrap:active {
+                    opacity: 0.3;
+                }
+            .main-menu {
+                display: flex;
+                justify-content: center;
+                width: 760px;
+                padding: 0;
+                margin: 0;
+
+                list-style: none;
+            }
+                .main-menu .menu-item {
+                    display: block;
+                    padding: 5px 20px;
+                    margin: 0 4px;
+
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 30px;
+                    color: #000;
+                    text-decoration: none;
+                }
+                    .main-menu .menu-item:hover,
+                    .main-menu .menu-item:focus {
+                        color: #fb565a;
+                    }
+                    .main-menu .menu-item:active {
+                        color: #797979;
+                    }
+            .nav-wrap .cart {
+                position: relative;
+
+                display: block;
+                padding-left: 35px;
+
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 30px;
+                color: #000;
+                text-decoration: none
+            }
+                .nav-wrap .cart::before {
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -8px;
+                    left: 0;
+
+                    content: "";
+                    width: 15px;
+                    height: 15px;
+                    background-image: url("../img/cart-icon.svg");
+                    background-size: contain;
+                    background-position: 0 0;
+                    background-repeat: no-repeat;
+                }
+                .nav-wrap .cart:hover,
+                .nav-wrap .cart:focus {
+                    color: #fb565a;
+                }
+                .nav-wrap .cart:active {
+                    color: #797979;
+                }
+            .menu-item-current {
+                position: relative;
+            }
+            .menu-item-current::after {
+                position: absolute;
+                bottom: 0;
+                right: 20px;
+                left: 20px;
+
+                content: "";
+                height: 2px;
+                background-color: #fb565a;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+        .slider {
+
+        }
+            .slide-list {
+                position: relative;
+                display: flex;
+
+                width: 100%;
+                height: 414px;
+                margin: 0;
+                padding: 0;
+
+                list-style: none;
+                overflow: hidden;
+            }
+                .slide-item {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-shrink: 0;
+                }
+                    .slider-text {
+                        width: 380px;
+                        margin-right: 20px;
+                    }
+                        .slogan {
+                            font-weight: 500;
+                            font-size: 55px;
+                            line-height: 55px;
+
+                            margin: 0;
+                            margin-top: 60px;
+                            margin-bottom: 30px;
+                        }
+                        .slogan-details {
+                            font-size: 16px;
+                            line-height: 24px;
+                            margin: 0;
+                            margin-bottom: 37px;
+                        }
+                    .slide-img {
+                        position: relative;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+                        width: 760px;
+
+                        flex-shrink: 0;
+                    }
+                    .learn-more {
+                        font-size: 16px;
+                        line-height: 18px;
+                        color: #fff;
+
+                        padding: 16px 53px;
+                        background-color: #fb565a;
+                        text-transform: uppercase;
+                    }
