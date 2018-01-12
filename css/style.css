@@ -493,14 +493,27 @@ button {
                         display: none;
                     }
 .contacts-block {
-    width: 100%;
     position: relative;
+    width: 100%;
+    margin-bottom: 70px;
 }
-    .contacts-block img {
+    .contacts-block .map img {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
     }
+        .contacts-block .map::after {
+            content: "";
+            position: absolute;
+            left: 820px;
+            top: 90px;
+
+            width: 231px;
+            height: 190px;
+
+            background-image: url("../img/map-marker.png");
+
+        }
     .contacts-block .center-wrap{ 
         display: flex;
         align-items: center;
@@ -551,25 +564,57 @@ button {
 .main-footer {
 
 }
-    .main-footer .social-list {
+    .main-footer .center-wrap {
         display: flex;
-        width: 262px;
-        padding: 0;
-        margin: 0;
-        list-style: none;
     }
-        .main-footer .social-list li a {
-            display: block;
-            width: 78px;
-            height: 78px;
-
-            background-color: #e1e1e1;
-            background-image: url("../img/vk-icon.svg");
-            background-repeat: no-repeat;
-            background-position: center center;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
+        .main-footer .social-list {
+            display: flex;
+            min-width: 262px;
+            padding: 0;
+            margin: 0;
+            margin-right: 140px;
+            list-style: none;
         }
+            .main-footer .social-list li {
+                margin-right: 13px;
+            }
+                .main-footer .social-list li:last-child {
+                    margin-right: 0;
+                }
+                .main-footer .social-list li a {
+                    display: block;
+                    width: 78px;
+                    height: 78px;
+
+                    background-color: #e1e1e1;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    border-radius: 50%;
+                }
+                    .social-list li a:hover,
+                    .social-list li a:focus {
+                        background-color: #e74246;
+                    }
+                    .social-list .social-vk {
+                        background-image: url("../img/vk-icon.svg");
+                    }
+                    .social-list .social-fb {
+                        background-image: url("../img/fb-icon.svg");
+                    }
+                    .social-list .social-insta {
+                        background-image: url("../img/insta-icon.svg");
+                    }
+        .main-footer .text-block {
+
+        }
+            .main-footer .text-block .add-social {
+                font-size: 36px;
+                line-height: 36px;
+                font-weight: 700;
+
+                margin: 0;
+            }
 
     
