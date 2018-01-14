@@ -125,7 +125,7 @@
                     <h3>NЁRDS DESIGN STUDIO</h3>
                     <p class="address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
                     <p class="tel">тел. +7 (812) 275-75-75</p>
-                    <button type="button">Напишите нам</button>
+                    <button type="button"><span>Напишите нам</span></button>
                 </div>
             </div>
         </section>
@@ -144,7 +144,28 @@
             </div>
         </footer>
 
+        <section class="write-us hidden">
+            <div class="form-wrap">
+                <form action="" class="feedback-form">
+                    <h3>Напишите нам</h3>
+                    <p class="field-block half-space">
+                        <label class="field-label" for="feedback-name">Ваше имя:</label>
+                        <input class="form-field" type="text" name="feedback-name" id="feedback-name" placeholder="Представьтесь, пожалуйста">
+                    </p>
+                    <p class="field-block half-space">
+                        <label class="field-label" for="feedback-mail">Ваш e-mail:</label>
+                        <input class="form-field"  type="email" name="feedback-mail" id="feedback-mail" placeholder="Для отправки ответа">
+                    </p>
+                    <p class="field-block full-space">
+                        <label class="field-label" for="feedback-text">Текст письма:</label>
+                        <textarea class="form-field" rows="5" name="feedback-text" id="feedback-text" placeholder="В свободной форме"></textarea>
+                    </p>
 
+                    <button class="submit-form" type="submit"><span>Отправить</span></button>
+                    <button class="close-form" type="reset"></button>
+                </form>
+            </div>
+        </section>
 
         <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     </body>
