@@ -855,7 +855,6 @@ main .center-wrap {
     }
         .range-block-wrap {
             margin-bottom: 60px;
-            background-color: rgba(255, 0, 255, 0.2);
         }
             .range-block-wrap .filter-label {
                 font-size: 18px;
@@ -870,6 +869,7 @@ main .center-wrap {
                 padding: 39px 18px;
                 background-color: #eeeeee;
                 border-radius: 5px;
+                margin-bottom: 15px;
 
                 box-sizing: border-box;
             }
@@ -903,17 +903,36 @@ main .center-wrap {
                             height: 2px;
                             background-color: #00ca74;
                         }
-            .range-from,
-            .range-to {
+            .range-in-numbers-wrap {
+                display: flex;
+                justify-content: space-between;
+            }
+            .range-in-numbers {
+                display: flex;
+                align-items: center;
+
                 font-size: 16px;
                 line-height: 22px;
                 font-weight: 400;
-                width: 50%;
+                text-align: center;
                 text-transform: uppercase;
+                
+                width: 115px;
             }
-                .rande-from {
-
+                .range-in-numbers .text {
+                    margin-right: 12px;
+                    border-radius: 5px;
                 }
+                .range-in-numbers .number {
+                    width: 80px;
+                    padding: 8px 0;
+                    background-color: #eeeeee;
+                    border-radius: 5px;
+                }
+        .grid-type-wrap {
+        
+            background-color: rgba(255, 0, 255, 0.2);
+        }
 
     .catalog {
         width: 760px;
