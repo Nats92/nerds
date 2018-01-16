@@ -51,17 +51,34 @@
 
                         <fieldset class="grid-type-wrap">
                             <legend class="filter-label">Сетка:</legend>
-                            <label><input type="radio" value="Адаптивная">Адаптивная</label>
-                            <label><input type="radio" value="Фиксированная">Фиксированная</label>
-                            <label><input type="radio" value="Резиновая">Резиновая</label>
+
+                            <label for="adaptive">Адаптивная</label>
+                            <input class="visually-hidden" type="radio" name="grid-type" value="Адаптивная" id="adaptive">
+
+                            <label for="fixed">Фиксированная</label>
+                            <input class="visually-hidden" type="radio" name="grid-type" value="Фиксированная" id="fixed">
+
+                            <label for="rubber">Резиновая</label>
+                            <input class="visually-hidden" type="radio" name="grid-type" value="Резиновая" id="rubber">
                         </fieldset>
 
                         <fieldset>
                             <legend class="filter-label">Особенности</legend>
-                          <label for="">Слайдер<input type="checkbox" name="" id=""><input type="checkbox" name=""
-                                                                                              id=""><input
-                            type="checkbox" name="" id=""><input type="checkbox" name="" id=""><input
-                            type="checkbox" name="" id=""></label>
+
+                              <label for="">Слайдер</label>
+                              <input type="checkbox" name="slider" id="">
+
+                              <label for="">Блок преимуществ</label>
+                              <input type="checkbox" name="" id="">
+
+                              <label for="">Новости</label>
+                              <input type="checkbox" name="" id="">
+
+                              <label for="">Галерея</label>
+                              <input type="checkbox" name="" id="">
+
+                              <label for="">Корзина</label>
+                              <input type="checkbox" name="" id="">
                         </fieldset>
 
 
