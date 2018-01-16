@@ -853,17 +853,17 @@ main .center-wrap {
         margin-right: auto;
         background-color: rgba(0, 255, 255, 0.2);
     }
-        .range-block-wrap {
-            margin-bottom: 60px;
+        .filters .filter-label {
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0;
+            margin-bottom: 48px;
         }
-            .range-block-wrap .filter-label {
-                font-size: 18px;
-                line-height: 30px;
-                font-weight: 700;
-                text-transform: uppercase;
-                margin: 0;
-                margin-bottom: 48px;
-            }
+        .range-block-wrap {
+            margin-bottom: 54px;
+        }
             .range-block-wrap .range-wrap {
                 width: 100%;
                 padding: 39px 18px;
@@ -930,9 +930,25 @@ main .center-wrap {
                     border-radius: 5px;
                 }
         .grid-type-wrap {
-        
+            display: flex;
+            flex-direction: column;
+
+            padding: 0;
+            border: none;
+
             background-color: rgba(255, 0, 255, 0.2);
         }
+            .grid-type-wrap .filter-label {
+                margin-bottom: 13px;
+            }
+            .grid-type-wrap label {
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 400;
+                color: #283136;
+
+                margin-bottom: 20px;
+            }
 
     .catalog {
         width: 760px;
