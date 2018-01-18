@@ -6,8 +6,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
 	</head>
-	<body class="shop-page">
-				<header class="header">
+    <body class="shop-page">
+        <header class="header">
             <div class="center-wrap">
                 <div class="nav-wrap">
                     <a class="logo-wrap" href="index.html"><img src="img/logo.svg" width="160" height="65"></a>
@@ -19,34 +19,34 @@
                     </ul>
                     <a class="cart" href="shopping-cart.html">корзина</a>
                 </div>
-                <h1>Магазин готовых шаблонов</h1>
-        	</div>
+            <h1>Магазин готовых шаблонов</h1>
+            </div>
         </header>
 
         <main>
-						<div class="center-wrap">
-								<section class="filters">
-										<form action="" class="filter-form">
-												<div class="range-block-wrap">
-														<p class="filter-label">Стоимость:</p>
-														<div class="range-wrap">
-																<div class="range-line">
-																		<span class="range-pin left-pin"></span>
-																		<span class="range-line-indicator"></span>
-																		<span class="range-pin right-pin"></span>
-																</div>
-														</div>
-														<div class="range-in-numbers-wrap">
-																<div class="range-in-numbers range-from">
-																		<span class="text">от</span>
-																		<span class="number">0</span>
-																</div>
-																<div class="range-in-numbers range-to">
-																		<span class="text">до</span>
-																		<span class="number">15000</span>
-																</div>
-														</div>
-												</div>
+            <div class="center-wrap">
+                <section class="filters">
+                    <form action="" class="filter-form">
+                        <div class="range-block-wrap">
+                            <p class="filter-label">Стоимость:</p>
+                            <div class="range-wrap">
+                                <div class="range-line">
+                                    <span class="range-pin left-pin"></span>
+                                    <span class="range-line-indicator"></span>
+                                    <span class="range-pin right-pin"></span>
+                                </div>
+                            </div>
+                            <div class="range-in-numbers-wrap">
+                                <div class="range-in-numbers range-from">
+                                    <span class="text">от</span>
+                                    <span class="number">0</span>
+                                </div>
+                                <div class="range-in-numbers range-to">
+                                    <span class="text">до</span>
+                                    <span class="number">15000</span>
+                                </div>
+                            </div>
+                        </div>
 
 
                         <fieldset class="grid-type-wrap">
@@ -62,35 +62,91 @@
                             <input class="visually-hidden" type="radio" name="grid-type" value="Резиновая" id="rubber">
                         </fieldset>
 
-                        <fieldset>
+                        <fieldset class="filter-features">
                             <legend class="filter-label">Особенности</legend>
 
-                              <label for="">Слайдер</label>
-                              <input type="checkbox" name="slider" id="">
+                            <label for="slider">Слайдер</label>
+                            <input class="visually-hidden" type="checkbox" name="feature-slider" id="slider">
 
-                              <label for="">Блок преимуществ</label>
-                              <input type="checkbox" name="" id="">
+                            <label for="block-of-features">Блок преимуществ</label>
+                            <input class="visually-hidden" type="checkbox" name="feature-block-of-features" id="block-of-features">
 
-                              <label for="">Новости</label>
-                              <input type="checkbox" name="" id="">
+                            <label for="news">Новости</label>
+                            <input class="visually-hidden" type="checkbox" name="feature-news" id="news">
 
-                              <label for="">Галерея</label>
-                              <input type="checkbox" name="" id="">
+                            <label for="gallery">Галерея</label>
+                            <input class="visually-hidden" type="checkbox" name="feature-gallery" id="gallery">
 
-                              <label for="">Корзина</label>
-                              <input type="checkbox" name="" id="">
+                            <label for="shopping-cart">Корзина</label>
+                            <input class="visually-hidden" type="checkbox" name="feature-shopping-cart" id="shopping-cart">
                         </fieldset>
 
+                        <button class="filter-form-submit" type="submit">Показать</button>
+                    </form>
+                </section>
 
+                <section class="catalog">
+                    <div class="catalog-sort">
+                        <p class="sort-heading">Сортировать:</p>
+                        <p class="sort-links-wrap">
+                            <a class="sort-by-price active" href="#">По цене</a>
+                            <a class="sort-by-type" href="#">По типу</a>
+                            <a class="sort-by-name" href="#">По названию</a>
+                        </p>
+                        <p class="sort-arrows-wrap">
+                            <a class="arrow-sort-decrease" href="#"></a>
+                            <a class="arrow-sort-increase" href="#"></a>
+                        </p>
+                    </div>
 
-
-										</form>
-								</section>
-
-						<section class="catalog">
-
-						</section>
-					</div>
+                    <ul class="catalog-list">
+                        <li class="catalog-item">
+                            <img src="img/img-sedona.jpg" width="360" height="576" alt="Шаблон сайта Седона">
+                            <div class="catalog-item-info">
+                                <h2>Sedona</h2>
+                                <p>Информационный сайт для туристов</p>
+                                <button class="catalog-item-price" type="button">9 900 руб.</button>
+                            </div></li>
+                        <li class="catalog-item">
+                            <img src="img/img-pink.jpg" width="360" height="576" alt="Шалбон сайта Pink">
+                            <div class="catalog-item-info">
+                                <h2>Pink App</h2>
+                                <p>Продуктовый лендинг приложения для iOS и Android</p>
+                                <button class="catalog-item-price" type="button">9 900 руб.</button>
+                            </div></li>
+                        <li class="catalog-item">
+                            <img src="img/img-barbershop.jpg" width="360" height="576" alt="Шалбон сайта Барбершоп">
+                            <div class="catalog-item-info">
+                                <h2>Barbershop</h2>
+                                <p>Сайт салона красоты. Для мужчин, да.</p>
+                                <button class="catalog-item-price" type="button">9 900 руб.</button>
+                            </div></li>
+                        <li class="catalog-item">
+                            <img src="img/img-mishka.jpg" width="360" height="576" alt="Шалбон сайта Mishka">
+                            <div class="catalog-item-info">
+                                <h2>MISHKA</h2>
+                                <p>Интернет-магазин вязаных игрушек</p>
+                                <button class="catalog-item-price" type="button">9 900 руб.</button>
+                            </div></li>
+                        <li class="catalog-item">
+                            <img src="img/img-aplus.jpg" width="360" height="576" alt="Шалбон сайта aplus">
+                            <div class="catalog-item-info">
+                                <h2>A Plus</h2>
+                                <p>Лендинг курсов повышения квалификации</p>
+                                <button class="catalog-item-price" type="button">9 900 руб.</button>
+                            </div></li>
+                        <li class="catalog-item">
+                            <img src="img/img-kvast.jpg" width="360" height="576" alt="Шалбон сайта Кваст">
+                            <div class="catalog-item-info">
+                                <h2>КВАСТ</h2>
+                                <p>Промо-сайт производителя крафтового кваса</p>
+                                <button class="catalog-item-price" type="button">9 900 руб.</button>
+                            </div></li>
+                    </ul>
+                </section>
+            </div>
         </main>
+
+        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	</body>
 </html>
