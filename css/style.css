@@ -852,7 +852,7 @@ main .center-wrap {
         width: 260px;
         margin-right: auto;
     }
-        .filters .filter-label {
+        .filters .filter-title {
             font-size: 18px;
             line-height: 30px;
             font-weight: 700;
@@ -936,17 +936,80 @@ main .center-wrap {
             border: none;
             margin-bottom: 27px;
         }
-            .grid-type-wrap .filter-label {
+            .grid-type-wrap .filter-title {
                 margin-bottom: 13px;
             }
-            .grid-type-wrap label {
+            .grid-type-radio + label {
+                position: relative;
+                display: block;
+
                 font-size: 16px;
                 line-height: 20px;
                 font-weight: 400;
                 color: #283136;
 
                 margin-bottom: 20px;
+                padding-left: 36px;
+
+                cursor: pointer;
             }
+                .grid-type-radio:hover + label,
+                .grid-type-radio:focus + label {
+                    color: #000;
+                }
+                .grid-type-radio:disabled + label {
+                    color: rgba(0, 0, 0, 0.3);
+                    cursor: default;
+                }
+            .grid-type-radio + label::before {
+                position: absolute;
+                left: 0;
+
+                width: 25px;
+                height: 25px;
+
+                content: "";
+
+                border: 4px solid #b8b8b8;
+                border-radius: 50%;
+                box-sizing: border-box;
+            }
+            .grid-type-radio:checked + label::after {
+                position: absolute;
+                top: 8px;
+                left: 8px;
+
+                content: "";
+                width: 9px;
+                height: 9px;
+
+                border-radius: 50%;
+                background-color: #b8b8b8;
+            }
+                .grid-type-radio:checked:hover + label::after,
+                .grid-type-radio:checked:focus + label::after {
+                    background-color: #4d4d4d;
+                }
+                .grid-type-radio:hover + label::before,
+                .grid-type-radio:focus + label::before {
+                    border-color: #4d4d4d;
+                }
+                .grid-type-radio:disabled + label::before,
+                .grid-type-radio:checked:disabled + label::after {
+                    opacity: 0.1;
+                }
+                    .grid-type-radio:disabled:hover + label::after,
+                    .grid-type-radio:disabled:focus + label::after {
+                        background-color: #b8b8b8;
+                    }
+                    .grid-type-radio:disabled:hover + label::before,
+                    .grid-type-radio:disabled:focus + label::before,
+                    .grid-type-radio:disabled:hover + label,
+                    .grid-type-radio:disabled:focus + label {
+                        border-color: #b8b8b8;
+                        color: rgba(0, 0, 0, 0.3);
+                    }
+            
         .filter-features {
             display: flex;
             flex-direction: column;
@@ -955,12 +1018,57 @@ main .center-wrap {
             border: none;
             margin-bottom: 29px;
         }
-            .filter-features label {
-                margin-bottom: 21px;
-            }
-            .filter-features .filter-label {
+            .filter-features .filter-title {
                 margin-bottom: 16px;
             }
+            .filter-features-checkbox + label {
+                position: relative;
+
+                display: block;
+                margin-bottom: 21px;
+                padding-left: 36px;
+
+                color: #283136;
+                cursor: pointer;
+            }
+                .filter-features-checkbox:hover + label,
+                .filter-features-checkbox:focus + label {
+                    color: #000;
+                }
+                .filter-features-checkbox:disabled + label {
+                    color: rgba(0, 0, 0, 0.3);
+                    cursor: default;
+                }
+                .filter-features-checkbox + label::before {
+                    position: absolute;
+                    left: 0;
+
+                    content: "";
+                    
+                    width: 27px;
+                    height: 23px;
+                    background-image: url("../img/checkbox-off-ordinary.png");
+                    background-repeat: no-repeat;
+                }
+                    .filter-features-checkbox:hover + label::before,
+                    .filter-features-checkbox:focus + label::before {
+                        background-image: url("../img/checkbox-off-hover.png");
+                    }
+                    .filter-features-checkbox:disabled + label::before {
+                        background-image: url("../img/checkbox-off-disabled.png");
+                    }
+                    .filter-features-checkbox:checked + label::before {
+                        background-image: url("../img/checkbox-on-ordinary.png");
+                    }
+                        .filter-features-checkbox:checked:hover + label::before,
+                        .filter-features-checkbox:checked:focus + label::before {
+                            background-image: url("../img/checkbox-on-hover.png");
+                        }
+                        .filter-features-checkbox:checked:disabled + label::before {
+                            background-image: url("../img/checkbox-on-disabled.png");
+                        }
+
+
         .filter-form-submit {
             font-size: 16px;
             line-height: 18px;
@@ -1126,6 +1234,15 @@ main .center-wrap {
                         border-radius: 5px;
                         background-color: #fb565a;
                     }
+                        .catalog-item-price:hover,
+                        .catalog-item-price:focus {
+                            background-color: #e74246;
+                        }
+                        .catalog-item-price:active {
+                            background-color: #d7373b;
+                            box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
+                        }
+
                 .catalog-item::before {
                     position: absolute;
                     top: 0;

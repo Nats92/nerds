@@ -28,7 +28,7 @@
                 <section class="filters">
                     <form action="" class="filter-form">
                         <div class="range-block-wrap">
-                            <p class="filter-label">Стоимость:</p>
+                            <p class="filter-title">Стоимость:</p>
                             <div class="range-wrap">
                                 <div class="range-line">
                                     <span class="range-pin left-pin"></span>
@@ -50,35 +50,35 @@
 
 
                         <fieldset class="grid-type-wrap">
-                            <legend class="filter-label">Сетка:</legend>
+                            <legend class="filter-title">Сетка:</legend>
 
+                            <input class="grid-type-radio visually-hidden" type="radio" name="grid-type" value="Адаптивная" id="adaptive" checked>
                             <label for="adaptive">Адаптивная</label>
-                            <input class="visually-hidden" type="radio" name="grid-type" value="Адаптивная" id="adaptive">
 
+                            <input class="grid-type-radio visually-hidden" type="radio" name="grid-type" value="Фиксированная" id="fixed" checked disabled>
                             <label for="fixed">Фиксированная</label>
-                            <input class="visually-hidden" type="radio" name="grid-type" value="Фиксированная" id="fixed">
 
+                            <input class="grid-type-radio visually-hidden" type="radio" name="grid-type" value="Резиновая" id="rubber" disabled>
                             <label for="rubber">Резиновая</label>
-                            <input class="visually-hidden" type="radio" name="grid-type" value="Резиновая" id="rubber">
                         </fieldset>
 
                         <fieldset class="filter-features">
-                            <legend class="filter-label">Особенности</legend>
+                            <legend class="filter-title">Особенности</legend>
 
+                            <input class="filter-features-checkbox visually-hidden" type="checkbox" name="feature-slider" id="slider" checked>
                             <label for="slider">Слайдер</label>
-                            <input class="visually-hidden" type="checkbox" name="feature-slider" id="slider">
 
+                            <input class="filter-features-checkbox visually-hidden" type="checkbox" name="feature-block-of-features" id="block-of-features" checked disabled>
                             <label for="block-of-features">Блок преимуществ</label>
-                            <input class="visually-hidden" type="checkbox" name="feature-block-of-features" id="block-of-features">
 
+                            <input class="filter-features-checkbox visually-hidden" type="checkbox" name="feature-news" id="news" disabled>
                             <label for="news">Новости</label>
-                            <input class="visually-hidden" type="checkbox" name="feature-news" id="news">
 
+                            <input class="filter-features-checkbox visually-hidden" type="checkbox" name="feature-gallery" id="gallery">
                             <label for="gallery">Галерея</label>
-                            <input class="visually-hidden" type="checkbox" name="feature-gallery" id="gallery">
 
+                            <input class="filter-features-checkbox visually-hidden" type="checkbox" name="feature-shopping-cart" id="shopping-cart">
                             <label for="shopping-cart">Корзина</label>
-                            <input class="visually-hidden" type="checkbox" name="feature-shopping-cart" id="shopping-cart">
                         </fieldset>
 
                         <button class="filter-form-submit" type="submit">Показать</button>
