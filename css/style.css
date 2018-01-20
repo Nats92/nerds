@@ -8,13 +8,20 @@ img {
 }
 button {
     font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
     padding: 0;
     border: none;
+    border-radius: 5px;
     background-color: transparent;
+
     cursor: pointer;
     outline: none;
-    text-transform: uppercase;
 }
+.form-field:focus::-webkit-input-placeholder {color: transparent;}
+.form-field:focus::-moz-placeholder          {color: transparent;}
+.form-field:focus:-moz-placeholder           {color: transparent;}
+.form-field:focus:-ms-input-placeholder      {color: transparent;}
+
 .visually-hidden {
     position: absolute;
 
@@ -91,6 +98,7 @@ button {
                     line-height: 30px;
                     color: #000;
                     text-decoration: none;
+                    outline: none;
                 }
                     .main-menu .menu-item:hover,
                     .main-menu .menu-item:focus {
@@ -150,6 +158,7 @@ button {
             }
         .slider {
             position: relative;
+            overflow: hidden;
         }
             .slide-list {
                 position: relative;
@@ -161,15 +170,16 @@ button {
                 padding: 0;
 
                 list-style: none;
-                overflow: hidden;
             }
                 .slide-item {
+                    position: relative;
+                    width: 100%;
                     display: flex;
                     justify-content: space-between;
                     flex-shrink: 0;
                 }
                     .slider-text {
-                        width: 380px;
+                        width: 530px;
                         margin-right: 20px;
                         z-index: 1;
                     }
@@ -189,12 +199,13 @@ button {
                             margin-bottom: 37px;
                         }
                     .slide-img {
-                        position: relative;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
 
                         display: flex;
                         justify-content: center;
                         align-items: flex-end;
-                        width: 760px;
 
                         flex-shrink: 0;
                     }
@@ -224,20 +235,30 @@ button {
                 display: flex;
                 justify-content: center;
                 width: 100%;
-                bottom: 100px;
+                bottom: 94px;
             }
                 .control-button {
-                    width: 8px;
-                    height: 8px;
-                    margin: 0 15px;
+                    position: relative;
+                    width: 18px;
+                    height: 18px;
+                    margin: 0 8px;
                     background-color: #ffffff;
-                    border: 2px solid #fff;
                     border-radius: 50%;
-                    box-shadow: 0 0 0 6px #fff;
                     flex-shrink: 0;
                 }
-                    .control-button.active {
-                        border-color: #c1c1c1;
+                    .control-button.active::before {
+                        content: "";
+                        position: absolute;
+                        left: 5px;
+                        top: 5px;
+                        display: block;
+                        width: 8px;
+                        height: 8px;
+                        border: 2px solid #c1c1c1;
+                        border-radius: 50%;
+                        -webkit-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        box-sizing: border-box;
                     }
 .services {
     margin-bottom: 40px;
@@ -794,7 +815,8 @@ button {
                     opacity: 0.3;
                     outline: none;
                 }
-                    .close-form:hover {
+                    .close-form:hover,
+                    .close-form:focus {
                         opacity: 1;
                     }
                     .close-form:active {
@@ -889,6 +911,7 @@ main .center-wrap {
                         border-radius: 50%;
                         box-sizing: border-box;
                         box-shadow: 0 2px 0 0 #cccdcd;
+                        cursor: pointer;
                         z-index: 1;
                     }
                         .range-pin.left-pin {
@@ -1068,8 +1091,6 @@ main .center-wrap {
                         .filter-features-checkbox:checked:disabled + label::before {
                             background-image: url("../img/checkbox-on-disabled.png");
                         }
-
-
         .filter-form-submit {
             font-size: 16px;
             line-height: 18px;
