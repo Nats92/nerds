@@ -214,13 +214,11 @@ button {
                         }
                         .learn-more:active {
                             background-color: #d7373b;
+                            color: rgba(255, 255, 255, 0.3);
                             -webkit-box-shadow: inset 0 3px 0 0 rgba(1, 1, 1, 0.1);
                             -moz-box-shadow: inset 0 3px 0 0 rgba(1, 1, 1, 0.1);
                             box-shadow: inset 0 3px 0 0 rgba(1, 1, 1, 0.1);
                         }
-                            .learn-more:active span {
-                                opacity: 0.3;
-                            }
             .slider-controls {
                 position: absolute;
                 display: flex;
@@ -287,19 +285,18 @@ button {
                 .services-list .list-item .order {
                     font-size: 16px;
                     line-height: 24px;
+                    font-weight: 500;
                     color: #ffffff;
 
                     padding: 14px 40px;
                     outline: none;
                 }
                     .services-list .list-item .order:active {
+                        color: rgba(255, 255, 255, 0.3);
                         -webkit-box-shadow: inset 0 3px 0 0 rgba(1, 1, 1, 0.1);
                         -moz-box-shadow: inset 0 3px 0 0 rgba(1, 1, 1, 0.1);
                         box-shadow: inset 0 3px 0 0 rgba(1, 1, 1, 0.1);
                     }
-                        .services-list .list-item .order:active span {
-                            opacity: 0.3;
-                        }
                     .sites .order {
                         background-color: #fb565a;
                     }
@@ -565,6 +562,7 @@ button {
                 .contacts button {
                     font-size: 16px;
                     line-height: 18px;
+                    font-weight: 500;
                     color: #ffffff;
 
                     width: 100%;
@@ -576,6 +574,7 @@ button {
                         background-color: #e74246;
                     }
                     .contacts button:active {
+                        color: rgba(255, 255, 255, 0.3);
                         -webkit-box-shadow: inset 0 3px 0 0 rgba(1, 1, 1, 0.1);
                         -moz-box-shadow: inset 0 3px 0 0 rgba(1, 1, 1, 0.1);
                         box-shadow: inset 0 3px 0 0 rgba(1, 1, 1, 0.1);
@@ -762,6 +761,7 @@ button {
                 .submit-form {
                     font-size: 16px;
                     line-height: 18px;
+                    font-weight: 500;
                     color: #fff;
 
                     padding: 16px 83px;
@@ -775,12 +775,10 @@ button {
                         background-color: #e74246;
                     }
                     .submit-form:active {
+                        color: rgba(255, 255, 255, 0.3);
                         -webkit-box-shadow: inset 0 3px 0 0 rgba(1, 1, 1, 0.1);
                         -moz-box-shadow: inset 0 3px 0 0 rgba(1, 1, 1, 0.1);
                         box-shadow: inset 0 3px 0 0 rgba(1, 1, 1, 0.1);
-                    }
-                    .submit-form:active span {
-                        opacity: 0.3;
                     }
                 .close-form {
                     position: absolute;
@@ -1096,6 +1094,7 @@ main .center-wrap {
     .catalog {
         width: 760px;
         padding-left :20px;
+        margin-bottom: 60px;
     }
         .catalog-sort {
             display: flex;
@@ -1171,7 +1170,7 @@ main .center-wrap {
             flex-wrap: wrap;
 
             margin: 0;
-            margin-bottom: 32px;
+            margin-bottom: 35px;
             padding: 0;
             list-style: none;
         }
@@ -1181,6 +1180,7 @@ main .center-wrap {
                 width: 360px;
                 padding-top: 39px;
                 margin-bottom: 27px;
+                overflow: hidden;
             }
                 .catalog-item img {
                     width: 100%;
@@ -1188,9 +1188,8 @@ main .center-wrap {
                 }
                 .catalog-item-info {
                     position: absolute;
-                    bottom: 0;
+                    bottom: -300px;
                     left: 0;
-                    display: none;
 
                     width: 100%;
                     min-height: 231px;
@@ -1201,8 +1200,18 @@ main .center-wrap {
                     box-sizing: border-box;
                     text-align: center;
                 }
+                @keyframes catalog-info-appear {
+                    from {
+                        transform: translateY(0.5);
+                    }
+                    to {
+                        transform: translateY(-300px);
+                    }
+                }
                     .catalog-item:hover .catalog-item-info {
-                        display: block;
+                        animation-name: catalog-info-appear;
+                        animation-duration: 1s;
+                        animation-fill-mode: forwards;
                     }
                     .catalog-item-info h2 {
                         font-size: 18px;
@@ -1240,6 +1249,7 @@ main .center-wrap {
                         }
                         .catalog-item-price:active {
                             background-color: #d7373b;
+                            color: rgba(255, 255, 255, 0.3);
                             box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
                         }
 
@@ -1262,3 +1272,46 @@ main .center-wrap {
                 .catalog-item:nth-child(2n + 1) {
                     margin-right: 40px;
                 }
+        .pagination {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+            .pagination li {
+                margin-right: 8px;
+            }
+                .pagination li:last-child {
+                    margin-right: 0;
+                }
+            .pagination a {
+                display: block;
+                font-size: 16px;
+                line-height: 18px;
+                font-weight: 500;
+                color: #000;
+                text-align: center;
+                text-decoration: none;
+
+                background-color: #eeeeee;
+                border: 3px solid #eeeeee;
+                border-radius: 5px;
+
+                padding: 13px 19px;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+
+            }
+                .pagination .pagin-num.current {
+                    border: 3px solid #dbdbdb;
+                    background-color: transparent;
+
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                }
+            .pagination .pagin-next {
+                width: 260px;
+                text-transform: uppercase;
+            }
